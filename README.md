@@ -2,6 +2,10 @@
 
 A collection of React hooks for managing temporary DOM element changes with automatic reversion.
 
+## Demo
+
+[Demo](https://y4shvine.github.io/react-temporary-hooks/)
+
 ## Installation
 
 ```bash
