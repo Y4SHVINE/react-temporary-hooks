@@ -15,16 +15,13 @@ export const useTemporaryBoolean = (duration: number) => {
       clearTimeout(timerRef.current);
     }
 
-    // Set the state to true
     setIsTemporaryVisible(true);
 
-    // Set a new timer to revert the state to false
     timerRef.current = setTimeout(() => {
       setIsTemporaryVisible(false);
     }, duration);
   }, [duration]);
 
-  // Cleanup the timer when the component unmounts or duration changes
   useEffect(() => {
     return () => {
       if (timerRef.current) {

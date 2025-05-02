@@ -17,7 +17,6 @@ export const useTemporaryClass = (
   const triggerClass = useCallback(() => {
     if (!elementRef?.current) return;
 
-    // Clear any existing timer
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }
@@ -25,7 +24,6 @@ export const useTemporaryClass = (
     // Add the class
     elementRef.current.classList.add(className);
 
-    // Set a new timer to remove the class
     timerRef.current = setTimeout(() => {
       if (elementRef.current) {
         elementRef.current.classList.remove(className);
@@ -33,7 +31,6 @@ export const useTemporaryClass = (
     }, duration);
   }, [elementRef, className, duration]);
 
-  // Cleanup the timer when the component unmounts or dependencies change
   useEffect(() => {
     return () => {
       if (timerRef.current) {

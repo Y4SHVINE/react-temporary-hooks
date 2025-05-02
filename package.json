@@ -47,6 +47,25 @@
       "limit": "10 KB"
     }
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Y4SHVINE/react-temporary-hooks"
+  },
+  "keywords": [
+    "react",
+    "react-hook",
+    "hook",
+    "temporary",
+    "timed",
+    "flash",
+    "text content",
+    "timed effects",
+    "temporary state",
+    "react utility",
+    "ui utility",
+    "frontend",
+    "temporary hooks"
+  ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.2.0",
     "@types/react": "^19.1.2",
